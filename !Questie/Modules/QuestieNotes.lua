@@ -654,7 +654,7 @@ function Questie_AvailableQuestClick()
                 Dewdrop:Open(this)
                 Dewdrop:Unregister(this)
             end
-            if (IsAddOnLoaded("Cartographer")) and (CartographerDB["disabledModules"]["Default"]["Look 'n' Feel"] == true) then
+            if (IsAddOnLoaded("Cartographer")) and CartographerDB["disabledModules"] and (CartographerDB["disabledModules"]["Default"]["Look 'n' Feel"] == true) then
                 Dewdrop:Register(this,
                     'children', function()
                         for i, quest in pairs(this.quests) do
